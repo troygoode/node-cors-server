@@ -7,11 +7,15 @@ var express = require('express'),
     port = process.env.PORT || 3000,
     app = express();
 
+/* -------------------------------------------------------------------------- */
+
 app.get('/no-cors', function(req, res){
   res.json({
     text: 'You should not see this via a CORS request.'
   });
 });
+
+/* -------------------------------------------------------------------------- */
 
 app.get('/simple-cors', cors(), function(req, res){
   res.json({
@@ -27,6 +31,9 @@ app.post('/simple-cors', cors(), function(req, res){
   });
 });
 
+/* -------------------------------------------------------------------------- */
+
+app.options('/complex-cors', cors());
 app.del('/complex-cors', cors(), function(req, res){
   res.json({
     text: 'Complex CORS requests are working. [DELETE]'
