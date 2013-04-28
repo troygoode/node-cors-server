@@ -40,6 +40,21 @@ app.del('/complex-cors', cors(), function(req, res){
   });
 });
 
+/* -------------------------------------------------------------------------- */
+
+var issue2options = {
+  origin: true,
+  methods: ['POST'],
+  credentials: true,
+  maxAge: 3600
+};
+app.options('/issue-2', cors(issue2options));
+app.post('/issue-2', cors(issue2options), function(req, res){
+  res.json({
+    text: 'Issue #2 is fixed.'
+  });
+});
+
 if(!module.parent){
   app.listen(port, function(){
     console.log('Express server listening on port ' + port + '.');
