@@ -27,6 +27,12 @@ app.post('/simple-cors', cors(), function(req, res){
   });
 });
 
+app.del('/complex-cors', cors(), function(req, res){
+  res.json({
+    text: 'Complex CORS requests are working. [DELETE]'
+  });
+});
+
 if(!module.parent){
   app.listen(port, function(){
     console.log('Express server listening on port ' + port + '.');
