@@ -6,6 +6,10 @@
     "start": "node app.js",
     "lint": "./node_modules/lint/bin/node-lint app.js"
   },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
   "dependencies": {
     "express": "*",
     "cors": "*"
