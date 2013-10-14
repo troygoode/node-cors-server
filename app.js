@@ -19,8 +19,9 @@ app.get('/no-cors', function(req, res){
 
 app.get('/simple-cors', cors(), function(req, res){
   console.log(req.headers);
-  console.log(req.getHeader('Origin'));
-  console.log(req.getHeader('Access-Control-Request-Headers'));
+  console.log(res.headers);
+  console.log(res.getHeader('Origin'));
+  console.log(res.getHeader('Access-Control-Request-Headers'));
   res.json({
     text: 'Simple CORS requests are working. [GET]'
   });
