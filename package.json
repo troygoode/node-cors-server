@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "prettier": "prettier --write app.js"
+    "prettier": "prettier --write server.js"
   },
   "engines": {
     "node": "^10.15",
