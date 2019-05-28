@@ -3,18 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "lint": "./node_modules/lint/bin/node-lint app.js"
+    "prettier": "prettier --write app.js"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "1.2.x"
+    "node": "^10.15",
+    "npm": "^2"
   },
   "dependencies": {
-    "express": "*",
-    "cors": "*"
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
   },
   "devDependencies": {
-    "lint": "*"
+    "prettier": "^1.17.1"
   }
 }
