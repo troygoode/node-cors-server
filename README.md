@@ -4,7 +4,7 @@ A test application that helps illustrate CORS while both in a working state and 
 
 ## See Also
 
-* https://node-cors-client.herokuapp.com/
+* https://node-cors-client.netlify.com/
 * https://github.com/expressjs/cors
 * https://github.com/troygoode/node-cors-client
 * https://github.com/troygoode/node-cors-server
